@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context>
+	<Resource name="jdbc/tutorial" auth="Container" type="javax.sql.DataSource"
+		maxActive="-1" maxIdle="100" maxWait="5000" username="root"
+		password="" driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/tutorial" />
+
+	<Realm className="org.apache.catalina.realm.DataSourceRealm"
+		debug="99" dataSourceName="jdbc/tutorial" localDataSource="true"
+		userTable="usuario" userNameCol="login" userCredCol="senha"
+		userRoleTable="permissao" roleNameCol="nome" />
+</Context>
